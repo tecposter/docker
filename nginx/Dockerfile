@@ -23,3 +23,5 @@ RUN set -ex \
 && apt-get purge -y --auto-remove $build_deps
 
 EXPOSE 80 443
+
+CMD ["nginx", "-g", "daemon off;"]
