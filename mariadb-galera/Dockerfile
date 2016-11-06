@@ -14,7 +14,7 @@ RUN set -ex \
     $build_deps \
 
 && apt-get install -y --no-install-recommends --no-install-suggests \
-    rsync libboost-all-dev check \
+    rsync libboost-all-dev check lsof \
 
 && cd /usr/local/src \
 && git clone https://github.com/MariaDB/galera.git galera \
@@ -24,6 +24,7 @@ RUN set -ex \
 && cp libgalera_smm.so /usr/lib64/galera/ \
 
 && cd / \
+&& apt-get purge -y --auto-remove $build_deps \
+&& apt-get autoremove -y \
 && rm -rf /usr/local/src/* \
-&& rm -rf /var/lib/apt/lists/* \
-&& apt-get purge -y --auto-remove $build_deps
+&& rm -rf /var/lib/apt/lists/*
