@@ -37,6 +37,7 @@ RUN set -ex \
     --with-pdo-mysql \
     --with-fpm-user=www-data \
     --with-fpm-group=www-data \
+    --with-zlib \
 && make \
 && make install \
 
