@@ -16,9 +16,9 @@ RUN set -ex \
     $build_deps \
 
 && cd /usr/local/src/ \
-&& curl -SL "http://cn2.php.net/get/php-7.0.12.tar.gz/from/this/mirror" -o php7.tar.gz \
+&& curl -SL "http://cn2.php.net/get/php-7.1.0.tar.gz/from/this/mirror" -o php7.tar.gz \
 && tar -zxf php7.tar.gz \
-&& cd php-7.0.12 \
+&& cd php-7.1.0 \
 
 && ./configure \
     --prefix=/usr/local \
