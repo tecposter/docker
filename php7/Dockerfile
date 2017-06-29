@@ -30,6 +30,7 @@ RUN set -ex \
     --enable-mbstring \
     --enable-zip \
     --enable-mysqlnd \
+    --enable-bcmath \
     --with-gd \
     --with-openssl \
     --with-curl \
