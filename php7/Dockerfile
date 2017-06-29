@@ -18,7 +18,7 @@ RUN set -ex \
 && cd /usr/local/src/ \
 && curl -SL "http://php.net/distributions/php-7.1.6.tar.gz" -o php7.tar.gz \
 && tar -zxf php7.tar.gz \
-&& cd php-7.1.0 \
+&& cd php-7.1.6 \
 
 && ./configure \
     --prefix=/usr/local \
